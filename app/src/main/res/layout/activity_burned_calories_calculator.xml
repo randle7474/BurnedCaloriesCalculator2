@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salangsang.romeo.burnedcaloriescalculator.BurnedCaloriesCalculatorActivity">
+
+    <TextView
+        android:id="@+id/weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Weight"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/weightET"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:id="@+id/weightET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Weight"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/weightTV"
+        android:layout_toRightOf="@+id/milesRanTV"
+        android:layout_toEndOf="@+id/milesRanTV"
+        tools:layout_editor_absoluteX="153dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/milesRanTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miles Ran:"
+        android:textStyle="bold"
+        android:layout_below="@+id/weightET"
+        android:layout_alignLeft="@+id/weightTV"
+        android:layout_alignStart="@+id/weightTV"
+        app:layout_constraintRight_toLeftOf="@+id/milesRan"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/caloriesBurntTV" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="36dp"
+        app:layout_constraintRight_toRightOf="@+id/weightET"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/caloriesTV" />
+
+    <TextView
+        android:id="@+id/milesRan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/milesRanTV"
+        android:layout_alignBottom="@+id/milesRanTV"
+        android:layout_toEndOf="@+id/milesRanTV"
+        android:layout_toRightOf="@+id/milesRanTV"
+        app:layout_constraintRight_toLeftOf="@+id/seekBar"
+        android:layout_marginRight="95dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toTopOf="@+id/caloriesTV" />
+
+    <TextView
+        android:id="@+id/caloriesBurntTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories Burned:"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/caloriesTV"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        android:layout_marginBottom="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/heightTV" />
+
+    <TextView
+        android:id="@+id/caloriesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginRight="89dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2" />
+
+    <TextView
+        android:id="@+id/heightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Height:"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/spinner1"
+        app:layout_constraintHorizontal_bias="0.202"
+        android:layout_marginBottom="62dp"
+        app:layout_constraintBottom_toTopOf="@+id/bmiTV" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="222dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/bmiTV" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="52dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/bmiOutTV" />
+
+    <TextView
+        android:id="@+id/bmiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="368dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="48dp" />
+
+    <TextView
+        android:id="@+id/bmiOutTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@+id/bmiTV"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="54dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/nameET"
+        app:layout_constraintHorizontal_bias="0.409"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/bmiTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Name Here"
+        android:inputType="textPersonName"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/bmiOutTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.298" />
+
+</android.support.constraint.ConstraintLayout>
